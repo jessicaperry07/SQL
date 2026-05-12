@@ -28,10 +28,26 @@ VALUES
     
 -- © Copyright 2025 Break Into Tech  --
 
+#For this project, I used SQL to query the Superstore database to get information about items sold at the store and their prices. 
 
+#Use a SELECT statement to order the items by price. 
+SELECT item_name, price
+FROM superstore
+ORDER by price DESC;
 
+#Show a statistic about the item prices.
+SELECT AVG(price)
+FROM superstore;
 
+#Show a statistic about the item prices in the category of "Electronics".
+SELECT SUM(price)
+FROM superstore
+WHERE category= "Electronics";
 
+#Write a query to show how many wireless earbuds are in stock.
+SELECT item_name, stock_quantity
+FROM superstore
+WHERE item_name= "Wireless Earbuds";
 
 
 
